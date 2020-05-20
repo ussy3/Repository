@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Modelnames</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fieldone</th>
+      <th>Fieldtwo</th>
+      <th>Fieldthree</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modelnames.each do |modelname| %>
+      <tr>
+        <td><%= modelname.fieldone %></td>
+        <td><%= modelname.fieldtwo %></td>
+        <td><%= modelname.fieldthree %></td>
+        <td><%= link_to 'Show', modelname %></td>
+        <td><%= link_to 'Edit', edit_modelname_path(modelname) %></td>
+        <td><%= link_to 'Destroy', modelname, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modelname', new_modelname_path %>
