@@ -69,6 +69,6 @@ class ModelnamesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def modelname_params
-      params.require(:modelname).permit(:fieldone, :fieldtwo, :fieldthree)
+      params.require(:modelname).permit(:fieldone, :fieldtwo, :fieldthree, :age, :lot)
     end
 end
